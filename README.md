@@ -205,12 +205,19 @@ def plot_piano_roll(notes: pd.DataFrame, count: Optional[int] = None):
 
 
 Purpose: To visualize the musical notes of the piano over time in a piano roll format.
+
 Explanation:
+
 def plot_piano_roll(notes: pd.DataFrame, count: Optional[int] = None): defines a function to create the plot.
+
 Handling the count Parameter:
+
 If count is provided, it plots only the first count notes and sets the title accordingly.
+
 If count is not provided, it plots the entire track and adjusts the title to "Whole track".
+
 Create the Plot:
+
 plt.figure(figsize=(20, 4)) sets the size of the plot.
 plot_pitch = np.stack([notes['pitch'], notes['pitch']], axis=0) duplicates the pitch values for plotting.
 plot_start_stop = np.stack([notes['start'], notes['end']], axis=0) creates an array with start and end times for plotting.
